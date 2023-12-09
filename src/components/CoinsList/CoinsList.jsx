@@ -12,7 +12,7 @@ const CoinsList = () => {
                 return <li  className='coin-item' key={coin.uuid}>
                     <div className='coin-item__info'>
                         <img  className='coin-item__logo' src={coin.iconUrl} alt={coin.name}></img>
-                        <p style={{color: coin.color}}>
+                        <p className='coin-item__name' style={{color: coin.color}}>
                             {coin.name}/USD
                         </p>
                     </div>

@@ -6,13 +6,11 @@ import styles from "./styles.module.css";
 const Main = ({ balance, setBalance, coins, setCoins }) => {
   return (
     <main className={styles.main}>
-      <Card balance={balance} setBalance={setBalance} />
-      <FilterBlock setCoins={setCoins} />
-      {coins.length > 0 ? (
-        <CoinsList/>
-      ) : (
-        <div>Loading...</div>
-      )}
+      <div className={styles.container}>
+        <Card balance={balance} setBalance={setBalance} />
+        <FilterBlock setCoins={setCoins} />
+        {coins.length > 0 ? <CoinsList /> : <div>Loading...</div>}
+      </div>
     </main>
   );
 };
